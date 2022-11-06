@@ -5,6 +5,7 @@
 
 ## Requirements
 * opencv-python
+* opencv-contrib-python
 * numpy
 * pillow
 * pytorch
@@ -12,8 +13,16 @@
 
 ## Classical image processing approach
 ### a) Detect and Count the pipes using Blob Detector
+```
+cd task1_pipe_counting \
+python byBlobDetector.py
+```
 Ref: https://learnopencv.com/blob-detection-using-opencv-python-c/
-### b) Detect and Count the pipes using thresholding and Hough circle transform
+### b) Detect and Count the pipes using masking color thresholding and Hough circle transform
+
+
+    "labellingTools.py" can be used for pipes detection and labelling purposes.The file is saved to xml as the same  "labelImg" 
+    
 
 ## Deep learning approach
 ### a) Ad-hoc object detection model
@@ -61,3 +70,17 @@ https://github.com/heartexlabs/labelImg
 https://github.com/pwwiur/hough-counter
 ```
 
+# ToDO
+
+Since classical image processing approach yield unstatisfactory result, A tailored yolo model will be developed
+
+### Todo
+
+- [ ] Take pipes images samples  
+- [ ] label using labelImg softwares
+- [ ] Develop model based on yolov4 or yolov5 
+
+### Done ✓
+
+- [x] Basic approach
+- [x] Literature Review
